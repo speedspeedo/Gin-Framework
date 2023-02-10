@@ -52,7 +52,7 @@ func render(ctx *gin.Context, data gin.H, templateName string) {
 	case "application/json":
 		// Respond with JSON
 		fmt.Println(ctx, "000")
-		//ctx.JSON(http.StatusOK, data["payload"])
+		ctx.JSON(http.StatusOK, data["payload"])
 	case "application/xml":
 		// Respond with XML
 		ctx.XML(http.StatusOK, data["payload"])
